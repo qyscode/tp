@@ -21,11 +21,11 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 
 * Role: Project Advisor
 
-### Ruben Teo
+### Jane Doe
 
-<img src="images/1rubzz.png" width="200px">
+<img src="images/johndoe.png" width="200px">
 
-[[github](http://github.com/1rubzz)]
+[[github](http://github.com/johndoe)]
 [[portfolio](team/johndoe.md)]
 
 * Role: Team Lead
