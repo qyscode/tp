@@ -339,6 +339,29 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case resumes at step 2.
 
+
+**Use case: Search for an employee**
+
+**MSS**
+
+1.  User requests a search for employee(s).
+2.  System processes the search query against the existing employee records.
+3.  System displays a list of all employees that match the search.
+
+    Use case ends.
+
+**Extensions**
+
+* 1a. The user executes the search with invalid command
+    * 1a1. System displays an error message indicating that search command is invalid, with guide on how to properly form it.
+    
+      Use case resumes at step 1.
+
+* 2a. No employees match the provided search query.
+    * 2a1. System displays a message indicating that the search yielded no results (e.g., "0 employees listed!").
+    
+      Use case ends.
+
 *{More to be added}*
 
 ### Non-Functional Requirements
