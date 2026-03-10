@@ -33,7 +33,7 @@ public class CommandTestUtil {
     public static final String VALID_EMAIL_AMY = "amy@example.com";
     public static final String VALID_EMAIL_BOB = "bob@example.com";
     public static final String VALID_ROLE_AMY = "UI Designer";
-    public static final String VALID_ROLE_BOB = "Software Engineer";
+    public static final String VALID_ROLE_BOB = "Head of Office";
     public static final String VALID_TAG_HUSBAND = "husband";
     public static final String VALID_TAG_FRIEND = "friend";
 
