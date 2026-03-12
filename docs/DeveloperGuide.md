@@ -431,8 +431,8 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
       
     Use case resumes at step 2.
 
-* 5b. The tag name provided is invalid (e.g., blank or contains forbidden characters).
-    * 5b1. System shows an error message describing valid tag format.
+* 5b. The tag name provided is invalid (e.g., blank, exceeds 50 characters, or contains non-alphanumeric characters).
+    * 5b1. System shows an error message: "Tags names should be alphanumeric and between 1 to 50 characters long".
       
     Use case resumes at step 4.
 
@@ -491,6 +491,8 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 * **Employee Record**: A collection of information stored in the system about an employee, such as name, 
                        email, phone number, and role.
 * **Command Line Interface (CLI)**: A text-based interface where users interact with the application by typing commands.
+* **Tag**: A label that can be attached to an employee record for categorization purposes. Tags must be alphanumeric
+  and 1-50 characters in length. Examples include "HR", "Manager", "FullTime", "Intern".
 
 --------------------------------------------------------------------------------------------------------------------
 
