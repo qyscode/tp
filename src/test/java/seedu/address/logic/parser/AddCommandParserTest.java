@@ -64,7 +64,7 @@ public class AddCommandParserTest {
 
     @Test
     public void parse_repeatedNonTagValue_failure() {
-        String validExpectedPersonStringNoName =  PHONE_DESC_BOB + EMAIL_DESC_BOB
+        String validExpectedPersonStringNoName = PHONE_DESC_BOB + EMAIL_DESC_BOB
                 + ROLE_DESC_BOB + TAG_DESC_FRIEND;
 
         // multiple phones

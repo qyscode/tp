@@ -31,7 +31,8 @@ public class NameTest {
         assertFalse(Name.isValidName("peter*")); // contains non-alphanumeric characters
         assertFalse(Name.isValidName("12345")); // numbers only
         assertFalse(Name.isValidName("peter the 2nd")); // alphanumeric characters
-        assertFalse(Name.isValidName("Alexander-Jonathan-Montgomery-Wellington-Smith-Anderson")); // unacceptably long String (prevents attacks)
+        assertFalse(Name.isValidName("Alexander-Jonathan" +
+                "-Montgomery-Wellington-Smith-Anderson")); // unacceptably long String (prevents attacks)
         assertFalse(Name.isValidName("David Roger Jackson Ray Jr 2nd")); // long names
 
         // valid name
