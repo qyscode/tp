@@ -51,7 +51,7 @@ public class PhoneTest {
         // special character '!'
         assertFalse(Phone.isValidPhone("931!1534"));
         // special character '#'
-        assertFalse(Phone.isValidPhone("93#141534")); 
+        assertFalse(Phone.isValidPhone("93#141534"));
         // len 17 phone number (>16)
         assertFalse(Phone.isValidPhone("93122315678111534"));
         // ridiculous length phone number
@@ -66,7 +66,7 @@ public class PhoneTest {
         // len 15 long phone number
         assertTrue(Phone.isValidPhone("124293842033123"));
         // len 16 phone number; possible edge case failure at limit
-        assertTrue(Phone.isValidPhone("9312231567811153")); 
+        assertTrue(Phone.isValidPhone("9312231567811153"));
     }
 
     @Test
