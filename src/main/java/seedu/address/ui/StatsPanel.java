@@ -88,3 +88,4 @@ public class StatsPanel extends UiPart<Region> {
         tagDistributionLabel.setText(stats.getTagDistribution());
     }
 }
+
