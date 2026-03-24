@@ -262,8 +262,9 @@ public class EditCommandTest {
     @Test
     public void getConfirmationPrompt_returnsExpectedPrompt() {
         EditCommand editCommand = new EditCommand(INDEX_SECOND_PERSON, new EditPersonDescriptor());
-        String expectedPrompt = String.format(EditCommand.MESSAGE_CONFIRMATION_PROMPT,
-                INDEX_SECOND_PERSON.getOneBased());
+        String expectedPrompt = ConfirmationPromptFormatter.format(
+            String.format(EditCommand.ACTION_SUMMARY_FORMAT, INDEX_SECOND_PERSON.getOneBased()),
+            EditCommand.IMPACT_SUMMARY);
         assertEquals(expectedPrompt, editCommand.getConfirmationPrompt());
     }
 

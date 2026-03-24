@@ -52,8 +52,9 @@ public class EditCommand extends Command implements ConfirmableCommand {
     public static final String MESSAGE_EDIT_PERSON_SUCCESS = "Edited Employee: %1$s";
     public static final String MESSAGE_NOT_EDITED = "At least one field to edit must be provided.";
     public static final String MESSAGE_DUPLICATE_PERSON = "This employee already exists in the list.";
-    public static final String MESSAGE_CONFIRMATION_PROMPT =
-            "Are you sure you want to edit employee at index %1$d? [y/n]";
+    public static final String ACTION_SUMMARY_FORMAT = "Edit employee at index %1$d.";
+    public static final String IMPACT_SUMMARY =
+            "Provided fields will overwrite existing employee details.";
     public static final String ACTION_DESCRIPTION = "edit employee details";
 
     private final Index index;
@@ -73,7 +74,9 @@ public class EditCommand extends Command implements ConfirmableCommand {
 
     @Override
     public String getConfirmationPrompt() {
-        return String.format(MESSAGE_CONFIRMATION_PROMPT, index.getOneBased());
+        String actionSummary = String.format(ACTION_SUMMARY_FORMAT, index.getOneBased());
+
+        return ConfirmationPromptFormatter.format(actionSummary, IMPACT_SUMMARY);
     }
 
     @Override

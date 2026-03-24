@@ -33,7 +33,11 @@ public class ClearCommandTest {
     @Test
     public void getConfirmationPrompt_returnsExpectedPrompt() {
         ClearCommand clearCommand = new ClearCommand();
-        assertEquals(ClearCommand.MESSAGE_CONFIRMATION_PROMPT, clearCommand.getConfirmationPrompt());
+        assertEquals(
+            ConfirmationPromptFormatter.format(
+                ClearCommand.ACTION_SUMMARY,
+                ClearCommand.IMPACT_SUMMARY),
+            clearCommand.getConfirmationPrompt());
     }
 
     @Test

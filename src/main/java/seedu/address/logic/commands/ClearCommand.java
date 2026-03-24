@@ -12,12 +12,14 @@ public class ClearCommand extends Command implements ConfirmableCommand {
 
     public static final String COMMAND_WORD = "clear";
     public static final String MESSAGE_SUCCESS = "Employee list has been cleared!";
-    public static final String MESSAGE_CONFIRMATION_PROMPT = "Are you sure you want to clear all employees? [y/n]";
+    public static final String ACTION_SUMMARY = "Clear all employees.";
+    public static final String IMPACT_SUMMARY =
+            "All employee records will be permanently removed.";
     public static final String ACTION_DESCRIPTION = "clear all employees";
 
     @Override
     public String getConfirmationPrompt() {
-        return MESSAGE_CONFIRMATION_PROMPT;
+        return ConfirmationPromptFormatter.format(ACTION_SUMMARY, IMPACT_SUMMARY);
     }
 
     @Override

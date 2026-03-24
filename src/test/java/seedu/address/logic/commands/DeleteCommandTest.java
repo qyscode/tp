@@ -204,7 +204,9 @@ public class DeleteCommandTest {
     @Test
     public void getConfirmationPrompt_duplicateIndexes_reportsUniqueCount() {
         DeleteCommand deleteCommand = new DeleteCommand(List.of(INDEX_FIRST_PERSON, INDEX_FIRST_PERSON));
-        String expectedPrompt = String.format(DeleteCommand.MESSAGE_CONFIRMATION_PROMPT, 1);
+        String expectedPrompt = ConfirmationPromptFormatter.format(
+                String.format(DeleteCommand.ACTION_SUMMARY_FORMAT, 1),
+                DeleteCommand.IMPACT_SUMMARY);
         assertEquals(expectedPrompt, deleteCommand.getConfirmationPrompt());
     }
 
