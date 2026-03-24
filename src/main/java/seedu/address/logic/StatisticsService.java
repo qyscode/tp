@@ -17,6 +17,12 @@ public class StatisticsService {
     private static final Logger logger = LogsCenter.getLogger(StatisticsService.class);
     private final Logic logic;
 
+    /**
+     * Constructs a StatisticsService with the given Logic component.
+     *
+     * @param logic The Logic component used to access employee data
+     * @throws AssertionError if logic is null
+     */
     public StatisticsService(Logic logic) {
         assert logic != null : "Logic cannot be null";
         this.logic = logic;
