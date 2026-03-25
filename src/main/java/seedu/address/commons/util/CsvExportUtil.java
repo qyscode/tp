@@ -1,14 +1,13 @@
 package seedu.address.commons.util;
 
-import seedu.address.model.person.Person;
-import seedu.address.model.tag.Tag;
-
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import seedu.address.model.person.Person;
 
 /**
  * Utility class for serialising a list of {@link Person} objects to a CSV file.

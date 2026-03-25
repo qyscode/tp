@@ -1,10 +1,6 @@
 package seedu.address.logic.commands;
 
-import seedu.address.commons.util.CsvExportUtil;
-import seedu.address.logic.commands.exceptions.CommandException;
-import seedu.address.model.AddressBook;
-import seedu.address.model.Model;
-import seedu.address.model.person.Person;
+import static java.util.Objects.requireNonNull;
 
 import java.io.IOException;
 import java.nio.file.InvalidPathException;
@@ -12,7 +8,10 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
-import static java.util.Objects.requireNonNull;
+import seedu.address.commons.util.CsvExportUtil;
+import seedu.address.logic.commands.exceptions.CommandException;
+import seedu.address.model.Model;
+import seedu.address.model.person.Person;
 
 /**
  * Exports current employee list into a csv file in the target destination.
@@ -28,11 +27,11 @@ public class ExportCommand extends Command {
 
     public static final String MESSAGE_SUCCESS = "Exported app data to csv file";
 
-    private static final String MESSAGE_IO_ERROR = "Could not write to file: %s\nCause: %s";
-    public static final String MESSAGE_INVALID_PATH =
-        "The provided file path is invalid: %s";
     public static final String MESSAGE_EMPTY_EXPORT =
         "Address book is empty — an empty CSV (header only) was written to: %s";
+    public static final String MESSAGE_INVALID_PATH =
+        "The provided file path is invalid: %s";
+    private static final String MESSAGE_IO_ERROR = "Could not write to file: %s\nCause: %s";
 
     private final String filePath;
 
@@ -59,6 +58,9 @@ public class ExportCommand extends Command {
             String.format(MESSAGE_SUCCESS, persons.size(), path.toAbsolutePath()));
     }
 
+    /**
+     * Resolves given path, throwing {@link CommandException} if it is invalid.
+     */
     private Path resolvePath() throws CommandException {
         try {
             return Paths.get(filePath);
