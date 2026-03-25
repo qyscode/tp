@@ -35,6 +35,9 @@ public class ExportCommand extends Command {
 
     private final String filePath;
 
+    /**
+     * Creates an ExportCommand
+     */
     public ExportCommand(String filePath) {
         requireNonNull(filePath);
         this.filePath = filePath.trim();
